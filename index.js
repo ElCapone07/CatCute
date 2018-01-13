@@ -118,7 +118,7 @@ bot.on('message', message => {
                 const hug10_embed = new Discord.RichEmbed()
                 .setColor(15105570)
                 .addField(message.author + " offre un câlin à " + mentionned.username ,"On aime se donner des câlins")
-                .setImage('http://pa1.narvii.com/5662/7614d83e68f9630de0f5a7a51690a73a42b529d6_hq.gif')
+                .setImage('https://media.giphy.com/media/yziFo5qYAOgY8/giphy.gif')
                 message.channel.sendEmbed(hug10_embed)
                 console.log('commande hug10 executé')
             }
