@@ -244,7 +244,7 @@ bot.on('message', message => {
                 const hug24_embed = new Discord.RichEmbed()
                 .setColor(15105570)
                 .addField(message.author + " offre un câlin à " + mentionned.username ,"On aime se donner des câlins")
-                .setImage('https://media1.tenor.com/images/d3b55e61856fbfbda4fb69e921ba18c6/tenor.gif?itemid=5163588')
+                .setImage('https://i.skyrock.net/9531/83199531/pics/3087048637_1_3_4dv7ysMK.gif')
                 message.channel.sendEmbed(hug24_embed)
                 console.log('commande hug24 executé')
             }
