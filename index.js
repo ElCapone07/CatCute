@@ -64,7 +64,7 @@ bot.on('message', message => {
                 const hug4_embed = new Discord.RichEmbed()
                 .setColor(15105570)
                 .addField(message.author + " offre un câlin à " + mentionned.username ,"On aime se donner des câlins")
-                .setImage('https://tenor.com/view/group-hug-anime-kon-gif-5960635')
+                .setImage('http://gifimage.net/wp-content/uploads/2017/01/Anime-hug-GIF-Image-Download-24.gif')
                 message.channel.sendEmbed(hug4_embed)
                 console.log('commande hug4 executé')
             }
