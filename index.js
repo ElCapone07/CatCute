@@ -12,7 +12,7 @@ var mention = "<@386166409002221568>";
 
 bot.on("ready",function() {
     console.log("Je suis en ligne");
-    bot.user.setGame('donner des hugs')
+    bot.user.setGame('Prefix > donner des hugs')
 });
 
 bot.login(process.env.TOKEN);
