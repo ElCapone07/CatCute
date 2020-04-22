@@ -4,7 +4,7 @@ const superagent = require("superagent")
 
 var bot = new Discord.Client();
 
-var PREFIX = ">";
+var PREFIX = "?";
 
 var randnum = 0
 
@@ -12,7 +12,7 @@ var mention = "<@386166409002221568>";
 
 bot.on("ready",function() {
     console.log("Je suis en ligne");
-    bot.user.setGame('Prefix > donner des hugs')
+    bot.user.setGame('Prefix ? donner des hugs')
 });
 
 bot.login(process.env.TOKEN);
@@ -21,7 +21,7 @@ bot.on('message', message => {
     var mentionned = message.mentions.users.first();
     if (!mentionned) return;
     if(message.content[0] === PREFIX) {
-        if(message.content.startsWith(">hug")) {
+        if(message.content.startsWith("?hug")) {
             random();
 
             if (randnum == 0){
@@ -312,12 +312,12 @@ bot.on('message', message => {
     const command = args.shift().toLowerCase();
 
     if(message.content[0] === PREFIX) {
-        if (command === '>erreur') {
+        if (command === '?erreur') {
             message.channel.send('CatCute.exe a cessé de fonctionner :x:');
     }
 
     if(message.content[0] === PREFIX) {
-        if (command === '>say') {
+        if (command === '?say') {
             message.channel.send(args.join(' '));
             message.delete();
     }
@@ -325,7 +325,7 @@ bot.on('message', message => {
 
 bot.on('message', message => {
     if(message.content[0] === PREFIX) {
-        if(message.content === ">help") {
+        if(message.content === "?help") {
             message.channel.send({embed: {
                 color: 3447003,
                 author: {
@@ -336,22 +336,22 @@ bot.on('message', message => {
                 description: 'Bonjour tout le monde !',
                 fields: [{
                     name: 'Voici les commandes du bot CatCute',
-                    value: '%help pour afficher toute les commandes du bot CatCute'
+                    value: '?help pour afficher toute les commandes du bot CatCute'
                 },
                 {
-                    name: '>erreur',
+                    name: '?erreur',
                     value: 'le bot vous repond CatCute.exe a cessé de fonctionner :x:'
                 },
                 {
-                    name: '>say',
+                    name: '?say',
                     value: 'pour écrire en tant que bot'
                 },
                 {
-                    name: '>hug',
+                    name: '?hug',
                     value: 'pour donner un hug à la personne que tu souhaite'
                 },
                 {
-                    name: '>cat',
+                    name: '?cat',
                     value: 'le bot envoi des images de chats'
                 }],
                 timestamp: new Date(),
